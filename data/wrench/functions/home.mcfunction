@@ -1,3 +1,4 @@
+tellraw @p ["",{"text":"Teleporting...","color":"yellow"}]
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Tags:["gohome"]}
 execute store result entity @e[tag=gohome,limit=1] Pos[0] double 1 run scoreboard players get @s homex
 execute store result entity @e[tag=gohome,limit=1] Pos[1] double 1 run scoreboard players get @s homey
