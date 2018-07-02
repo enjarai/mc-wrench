@@ -10,3 +10,6 @@ scoreboard players enable @a home
 execute as @a[scores={home=1..,homey=1..}] at @s run function wrench:home
 execute as @a[scores={home=1..,homey=0}] at @s run tellraw @s ["",{"text":"No home set...","color":"yellow"}]
 scoreboard players set @a home 0
+
+scoreboard objectives add wrenchid dummy
+scoreboard players add @a wrenchid 0
