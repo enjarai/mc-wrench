@@ -13,3 +13,7 @@ scoreboard players set @a home 0
 
 scoreboard objectives add wrenchid dummy
 scoreboard players add @a wrenchid 0
+scoreboard objectives setdisplay list wrenchid
+
+execute as @a[scores={wrenchid=0}] at @s run scoreboard players add #global wrenchid 1
+execute as @a[scores={wrenchid=0}] at @s run scoreboard players operation @s wrenchid = #global wrenchid
