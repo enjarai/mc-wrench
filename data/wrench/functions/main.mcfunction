@@ -17,3 +17,5 @@ scoreboard objectives setdisplay list wrenchid
 
 execute as @a[scores={wrenchid=0}] at @s run scoreboard players add #global wrenchid 1
 execute as @a[scores={wrenchid=0}] at @s run scoreboard players operation @s wrenchid = #global wrenchid
+
+execute as @e[nbt={Inventory:[{Slot:-106b,id:minecraft:torch}]} at @s run function wrench:dynamiclights
